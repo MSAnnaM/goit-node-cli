@@ -15,6 +15,7 @@ const options = program.opts();
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
+
           listContacts().then(console.table);
       break;
 
@@ -29,7 +30,6 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "remove":
       removeContact(id).then(contact=>console.log(contact))
       break;
-
     default:
       console.warn("\x1B[31m Unknown action type!");
   }
