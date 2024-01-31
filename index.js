@@ -20,7 +20,7 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "get":
-          getContactById(id).then((contact) => console.log(contact || "There isn't contact with this id"));
+          getContactById(id).then((contact) => console.log(contact || null));
       break;
 
     case "add":
